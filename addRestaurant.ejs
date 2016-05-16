@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/addRestaurant.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  	<script src="scripts/addRestaurant.js"></script>
+    <script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
+  </head>
+
+<body>
+	<div class="container">
+
+
+		<div class="row">
+		  <div class="col-sm-12">
+		  	 <h1 class="title">Add Restaurant</h1>
+		  	 <a href="/">Reviews</a>
+		  	 <br>
+		  	 <p id="alert"> </p> 
+          <form class="form-horizontal" data-toggle="validator" role="form">          
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Restaurant Image:</label>
+              <div class="col-sm-10">
+                <p id="restaurantImageAlert"> </p>  
+                <input type="filepicker" data-fp-apikey="AoT2GIfzhSWiDNGjlyrmaz" data-fp-mimetypes="image/*" data-fp-container="modal" onchange="alert(event.fpfile.url)">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Restaurant:</label>
+              <div class="col-sm-10">
+                <p id="restaurantAlert"> </p>  
+                <input type="text"  class="form-control" id="name" placeholder="Enter name of restaurant" autofocus required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="address">Address</label>
+              <div class="col-sm-10"> 
+                <p id="restAddressAlert"> </p> 
+                <input type="text" class="form-control" id="address" placeholder="Enter adderess of restaurant" required  />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="cuisineType">Cuisine Type:</label>
+              <div class="col-sm-10">
+                <p id="cuisineTypeAlert"> </p> 
+                <input type="text" class="form-control" id="cuisineType" placeholder="Enter the type of cuisine served" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="openTime">Opening Hour:</label>
+              <div class="col-sm-10"> 
+                <p id="startTimeAlert"> </p> 
+                <input type="time" class="form-control" id="openTime"  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="closeTime">Closing Hour:</label>
+              <div class="col-sm-10"> 
+                <p id="endTimeAlert"> </p> 
+                <input type="time" class="form-control" id="closeTime" required />
+              </div>
+            </div>
+            <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" id="createRestaurantButton" class="btn btn-default" >Submit Restaurant</button>
+              </div>
+            </div>
+          </form>
+		  </div>
+		</div>
+	</div>
+</body>
+</html>
