@@ -19,7 +19,7 @@ $(document).ready(function(){
 		          $("tbody").append(
 		            "<tr>" + 
 		              "<td>" + "<img src=" + data.val().image + " class='img-responsive' alt='Image of Restaurant'>" + "</td>" + 
-		              "<td>" + data.val().name + "</a>" + "</td>" + 
+		              "<td>" + "<a href=/restaurant/" + data.key() + ">" + data.val().name + "</a>" + "</td>" + 
 		              "<td>" + data.val().cuisineType + "</td>" + 
 		              "<td>" + data.val().address + "</td>" + 
 		              "<td>" + data.val().openTime + "</td>" + 
