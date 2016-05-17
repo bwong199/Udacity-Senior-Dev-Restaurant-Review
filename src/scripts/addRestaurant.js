@@ -48,7 +48,7 @@ $(document).ready(function(){
           openTime: openTime, 
           closeTime: closeTime, 
           address: address, 
-          image, image
+          image: image
         });
 
         window.location.href="/";

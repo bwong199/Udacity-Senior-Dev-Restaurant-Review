@@ -2,7 +2,7 @@
       var ref = new Firebase("https://restaurant-review-1.firebaseio.com/restaurant");
 
       var cuisines = []
-
+      var locations = []
 
       ref.once("value", function(snapshot) {
         snapshot.forEach(function(data) {
@@ -19,26 +19,32 @@
           );
 
           cuisines.push(data.val().cuisineType.toLowerCase());
-
+          locations.push(data.val().address.toLowerCase())
 
         });
 
         console.log(cuisines);
       
         var uniqueCuisines = jQuery.unique(cuisines);
+        var uniqueLocations = jQuery.unique(locations);
 
         for (var x in uniqueCuisines){
-          console.log(uniqueCuisines[x]);
 
-          $(".dropdown-menu").append(
+          $("#dropdown").append(
             "<li><a href="  + "'" +  '/cuisines/' + uniqueCuisines[x] + "'" + "</a>" + uniqueCuisines[x].charAt(0).toUpperCase() + uniqueCuisines[x].slice(1) + "</li>"
 
           )
         }
 
+        for (var x in uniqueLocations){
+
+          $("#dropdown2").append(
+            "<li><a href="  + "'" +  '/cuisines/' + uniqueLocations[x] + "'" + "</a>" + uniqueLocations[x].charAt(0).toUpperCase() + uniqueLocations[x].slice(1) + "</li>"
+
+          )
+        }
  
 
-        console.log(uniqueCuisines);
 
         // for (var x in snapshot.val()){
         //   console.log(x.key)
