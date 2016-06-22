@@ -29,7 +29,7 @@
               <label class="control-label col-sm-2" for="name">Restaurant Image:</label>
               <div class="col-sm-10">
                 <p id="restaurantImageAlert"> </p>  
-                <input type="filepicker" data-fp-apikey="AoT2GIfzhSWiDNGjlyrmaz" data-fp-mimetypes="image/*" data-fp-container="modal" onchange="alert(event.fpfile.url)">
+                <input aria-label="Enter restaurant image" type="filepicker" data-fp-apikey="AoT2GIfzhSWiDNGjlyrmaz" data-fp-mimetypes="image/*" data-fp-container="modal" onchange="alert(event.fpfile.url)">
               </div>
             </div>
 
@@ -37,7 +37,7 @@
               <label class="control-label col-sm-2" for="name">Restaurant:</label>
               <div class="col-sm-10">
                 <p id="restaurantAlert"> </p>  
-                <input type="text"  class="form-control" id="name" placeholder="Enter name of restaurant" autofocus required />
+                <input aria-label="Enter restaurant name" type="text"  class="form-control" id="name" placeholder="Enter name of restaurant" autofocus required />
               </div>
             </div>
 
@@ -45,33 +45,33 @@
               <label class="control-label col-sm-2" for="address">Address</label>
               <div class="col-sm-10"> 
                 <p id="restAddressAlert"> </p> 
-                <input type="text" class="form-control" id="address" placeholder="Enter adderess of restaurant" required  />
+                <input aria-label="Enter restaurant address" type="text" class="form-control" id="address" placeholder="Enter adderess of restaurant" required  />
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-sm-2" for="cuisineType">Cuisine Type:</label>
               <div class="col-sm-10">
                 <p id="cuisineTypeAlert"> </p> 
-                <input type="text" class="form-control" id="cuisineType" placeholder="Enter the type of cuisine served" required />
+                <input aria-label="Enter restaurant cuisine" type="text" class="form-control" id="cuisineType" placeholder="Enter the type of cuisine served" required />
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-sm-2" for="openTime">Opening Hour:</label>
               <div class="col-sm-10"> 
                 <p id="startTimeAlert"> </p> 
-                <input type="time" class="form-control" id="openTime"  required />
+                <input aria-label="Enter restaurant opening time" type="time" class="form-control" id="openTime"  required />
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-sm-2" for="closeTime">Closing Hour:</label>
               <div class="col-sm-10"> 
                 <p id="endTimeAlert"> </p> 
-                <input type="time" class="form-control" id="closeTime" required />
+                <input aria-label="Enter restaurant closing time" type="time" class="form-control" id="closeTime" required />
               </div>
             </div>
             <div class="form-group"> 
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" id="createRestaurantButton" class="btn btn-default" >Submit Restaurant</button>
+                <button aria-label="Submit restaurant profile" type="submit" id="createRestaurantButton" class="btn btn-default" >Submit Restaurant</button>
               </div>
             </div>
           </form>
