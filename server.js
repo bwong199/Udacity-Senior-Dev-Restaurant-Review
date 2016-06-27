@@ -2,9 +2,9 @@ var express = require("express");
 var app = express();
 var PORT = 7000;
 
-app.use(express.static(__dirname + "/build" ));
+app.use(express.static(__dirname + "/src" ));
 
-app.set('views', __dirname + "/build");
+app.set('views', __dirname + "/src");
 app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 

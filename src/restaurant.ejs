@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"> 
+    <title>Restaurant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -23,7 +24,7 @@
       <div class="row">
         <div class="col-sm-12">
            <h1 class="title"></h1>
-           <a href="/">Home</a>
+           <a href="/" tabindex="1">Home</a>
            <br>
            <p id="alert"> </p> 
         </div>
@@ -52,35 +53,41 @@
 
 
               <div class="form-group">
+                <label class="control-label col-sm-2" for="rating">Restaurant Rating</label>
                 <div class="col-sm-10">
-
-  <input aria-label="Enter restaurant rating, minimum of 0, maximum of 5" id="input-id" type="number" class="rating" min=0 max=5 step=1 data-size="xs" data-rtl="false">
+                
+  <input tabindex="3" aria-label="Enter restaurant rating, minimum of 0, maximum of 5" id="input-id" type="number" class="rating" min=0 max=5 step=1 data-size="xs" data-rtl="false">
                 </div>
               </div>
 
               <div class="form-group">
+                <label class="control-label col-sm-2" for="reviewAuthor">Restaurant Reviewer</label>  
+                <div class="col-sm-10">
+                  <p id="restaurantAlert"> </p>
+                  
+                  <input tabindex="4" aria-label="Enter your name for restaurant review" type="text"  class="form-control" id="reviewAuthor" placeholder="Enter your name for review" autofocus required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="reviewDate">Review Date</label> 
                 <div class="col-sm-10">
                   <p id="restaurantAlert"> </p>  
-                  <input aria-label="Enter your name for restaurant review" type="text"  class="form-control" id="reviewAuthor" placeholder="Enter your name for review" autofocus required />
+
+                  <input tabindex="5" aria-label="Enter restaurant review date" type="date"  class="form-control" id="reviewDate"  autofocus required />
                 </div>
               </div>
 
               <div class="form-group">
-                <div class="col-sm-10">
-                  <p id="restaurantAlert"> </p>  
-                  <input aria-label="Enter restaurant review date" type="date"  class="form-control" id="reviewDate"  autofocus required />
-                </div>
-              </div>
-
-              <div class="form-group">
+                <label class="control-label col-sm-2" for="review">Restaurant Review</label>
                 <div class="col-sm-10"> 
-                  <textarea aria-label="Enter restaurant review" class="form-control" rows="5" id="review" placeholder="Enter restaurant review" required /></textarea>
+                  <textarea tabindex="6" aria-label="Enter restaurant review" class="form-control" rows="5" id="review" placeholder="Enter restaurant review" required /></textarea>
                 </div>
               </div>
 
               <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button aria-label="Submit restaurant" type="submit" id="createReviewButton" class="btn btn-default" >Submit Restaurant</button>
+                  <button  tabindex="7" aria-label="Submit restaurant" type="submit" id="createReviewButton" class="btn btn-default" >Submit Restaurant</button>
                 </div>
               </div>
       </form>
