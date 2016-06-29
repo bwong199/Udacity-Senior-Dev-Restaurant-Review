@@ -1,1 +1,107 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><title>Main Restaurant Review</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet type=text/css href=/styles/styles.css><link rel=stylesheet type=text/css href=/styles/bootstrap-accessibility.css><link rel=stylesheet href=http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css><script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js></script><script src=http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js></script><script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js></script><script src=https://cdn.firebase.com/js/client/2.4.2/firebase.js></script><script type=text/javascript src=/scripts/index.js></script><script type=text/javascript src=//api.filepicker.io/v2/filepicker.js></script></head><body><div class=container><nav class="navbar navbar-default"><div class=container-fluid><div class=navbar-header><button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#bs-example-navbar-collapse-1 aria-expanded=false><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button> <a class=navbar-brand href="/" tabindex=-1>Restaurant Review</a></div><div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1><ul class="nav navbar-nav"><li class=dropdown><a href=# class=dropdown-toggle data-toggle=dropdown role=button aria-haspopup=true aria-expanded=false>Cuisines <span class=caret></span></a><ul class=dropdown-menu id=dropdown></ul></li><li class=dropdown><a href=# class=dropdown-toggle data-toggle=dropdown role=button aria-haspopup=true aria-expanded=false>Locations <span class=caret></span></a><ul class=dropdown-menu id=dropdown2></ul></li></ul><form class="navbar-form navbar-left" role=search><div class=form-group><label for=search>Search</label> <input id=search type=text class=form-control tabindex=-4 placeholder=Search></div><button type=submit class="btn btn-default" tabindex=-5>Submit</button></form></div></div></nav><div class=row><div class=col-sm-12><h1 class=title>Restaurant Reviews</h1><a href=/addRestaurant>Add Restaurant</a><br><p id=alert></p></div></div><main><article><table class=table-condensed><thead><tr><th></th><th>Restaurant</th><th>Cuisine Type</th><th>Address</th><th>Start Time</th><th>End Time</th></tr></thead><tbody></tbody></table><article></article></article></main></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <title>Main Restaurant Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-accessibility.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  	<script type="text/javascript"  src="/scripts/index.js"></script>
+  	<script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
+  </head>
+
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/" tabindex="-1">Restaurant Review</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		     
+
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cuisines <span class="caret"></span></a>
+		          <ul class="dropdown-menu" id="dropdown">
+<!-- 		            <li><a href="#" tabindex="-2">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">One more separated link</a></li> -->
+		          </ul>
+		        </li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
+		          <ul class="dropdown-menu" id="dropdown2">
+<!-- 		            <li><a href="#" tabindex="-3">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">One more separated link</a></li> -->
+		          </ul>
+		        </li>
+		      </ul>
+		      <form class="navbar-form navbar-left" role="search">
+		      
+		        <div class="form-group">
+		        <label for="search">Search</label>
+		          <input id="search" type="text" class="form-control" tabindex="0" placeholder="Search">
+		        </div>
+		        <button type="submit" tabindex="0" class="btn btn-default" tabindex="-5">Submit</button>
+		      </form>
+
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+
+		<div class="row">
+		  <div class="col-sm-12">
+		  	 <h1 class="title">Restaurant Reviews</h1>
+		  	 <a href="/addRestaurant">Add Restaurant</a>
+		  	 <br>
+		  	 <p id="alert"> </p> 
+		  </div>
+		</div>
+
+
+	<main>
+		<article>
+		    <table class="table-condensed">
+		      <thead>
+		        <tr>
+		        	<th></th>
+		          	<th>Restaurant</th>
+		          	<th>Cuisine Type</th>
+		          	<th>Address</th>
+		          	<th>Start Time</th>
+		          	<th>End Time</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		      </tbody>
+		    </table>
+	   	<article>
+    </main>
+	</div>
+</body>
+</html>
