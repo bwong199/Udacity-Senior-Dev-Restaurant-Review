@@ -37,7 +37,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('htmlpage', function() {
-  var htmlSrc = './src/*.html',
+  var htmlSrc = './src/*.ejs',
       htmlDst = './build';
 
   gulp.src(htmlSrc)

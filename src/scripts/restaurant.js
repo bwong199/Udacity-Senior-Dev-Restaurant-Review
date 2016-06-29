@@ -70,7 +70,7 @@ $('#input-id').on('rating.change', function(event, value, caption, target) {
 	    snapshot.forEach(function(data) {
 	    	console.log(data.key());
 
-	    	$("#reviewParagraph").append("<input id=" + '"' + data.key() + '"' +  " value=" + '"' + data.val().rating  + '"' + " class="+ '"' + 'rating rating-loading' + '"' + ">"    + "<br><br>" + data.val().author + " says " + data.val().review + "<br><br><br>");
+	    	$("#reviewParagraph").append("<input id=" + '"' + data.key() + '"' +  " value=" + '"' + data.val().rating  + '"' + " class="+ '"' + 'rating rating-loading' + '"' + ">"    + "<br><br>" + data.val().date + "    -  " +  data.val().author + " says " + data.val().review + "<br><br><br>");
 
 	    	$('#'+data.key()).rating({displayOnly: true, step: 0.5, size:"xs"});
 	    })
