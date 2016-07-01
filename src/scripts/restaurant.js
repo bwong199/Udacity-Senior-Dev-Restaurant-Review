@@ -15,7 +15,6 @@ $('#input-id').on('rating.change', function(event, value, caption, target) {
 });
 
 
-
 	var id = location.pathname.split('/')[2];
 
 	console.log(id);
@@ -47,6 +46,8 @@ $('#input-id').on('rating.change', function(event, value, caption, target) {
     $("#createReviewButton").click(function(event){
         event.preventDefault();
         // console.log('hello world');
+        var stars = $('input[name=rating]:checked').val()
+ 
         var author = $('#reviewAuthor').val();
         var review = $('#review').val();
         var date = $('#reviewDate').val();

@@ -11,7 +11,7 @@ $(document).ready(function(){
 	ref.once("value", function(snapshot) {
 	    snapshot.forEach(function(data) {
 
-	    	if (data.val().cuisineType.toLowerCase() === cuisine.toLowerCase() | data.val().address.toLowerCase() === cuisine.toLowerCase()){
+	    	if (data.val().cuisineType.toLowerCase() === cuisine.toLowerCase() | data.val().city.toLowerCase() === cuisine.toLowerCase()){
 	    		console.log(data.key() + " " + data.val().cuisineType.toLowerCase() );
 
 

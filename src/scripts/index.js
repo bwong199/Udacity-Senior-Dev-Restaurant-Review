@@ -19,7 +19,7 @@
           );
 
           cuisines.push(data.val().cuisineType.toLowerCase());
-          locations.push(data.val().address.toLowerCase())
+          locations.push(data.val().city.toLowerCase())
 
         });
 
@@ -43,6 +43,14 @@
 
           )
         }
+
+        // $("button").click(function(event){
+        //   event.preventDefault();
+        //   var search = $('#search').val();
+        //   console.log(search);
+        //   window.location = "restaurant/" + search;
+
+        // })
  
 
 
